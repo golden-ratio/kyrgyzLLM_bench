@@ -1,0 +1,5 @@
+python_file: kyrgyz_tasks.py
+task: kyrgyz_mmlu_history
+class: !function kyrgyz_tasks.KyrgyzMMLUHistory
+output_type: loglikelihood
+repeats: 1

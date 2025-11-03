@@ -1,0 +1,4 @@
+lighteval==0.10.0
+lighteval[math]>=0.1.0
+datasets>=3.5.0,<4.0.0
+transformers>=4.53.3

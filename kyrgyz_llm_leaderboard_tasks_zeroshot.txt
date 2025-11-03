@@ -1,0 +1,25 @@
+# MMLU - kyrgyzMMLU
+community|kyrgyz_evals:kyrgyz_mmlu_medicine|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_history|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_literature|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_lang|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_biology|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_chemistry|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_geography|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_math|0|0
+community|kyrgyz_evals:kyrgyz_mmlu_physics|0|0
+# Reading comprehension - kyrgyzRC
+community|kyrgyz_evals:kyrgyz_rc_literature|0|0
+community|kyrgyz_evals:kyrgyz_rc_math|0|0
+community|kyrgyz_evals:kyrgyz_rc_news|0|0
+community|kyrgyz_evals:kyrgyz_rc_wiki|0|0
+# WinoGrande
+community|kyrgyz_evals:winogrande_kg|0|0
+# GSM8K
+community|kyrgyz_evals:gsm8k_kg|0|0
+# BoolQA
+community|kyrgyz_evals:boolq_kg|0|0
+# HellaSwag
+community|kyrgyz_evals:hellaswag_kg|0|0
+# TruthfulQA
+community|kyrgyz_evals:truthfulqa_mc_kg|0|0

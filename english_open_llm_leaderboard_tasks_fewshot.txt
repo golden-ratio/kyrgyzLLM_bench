@@ -1,0 +1,29 @@
+# HellaSwag
+leaderboard|hellaswag|10|0
+# TruthfulQA
+leaderboard|truthfulqa:mc|5|0
+# MMLU
+leaderboard|mmlu:college_biology|5|0
+leaderboard|mmlu:college_chemistry|5|0
+leaderboard|mmlu:college_mathematics|5|0
+leaderboard|mmlu:college_medicine|5|0
+leaderboard|mmlu:college_physics|5|0
+leaderboard|mmlu:elementary_mathematics|5|0
+leaderboard|mmlu:high_school_biology|5|0
+leaderboard|mmlu:high_school_chemistry|5|0
+leaderboard|mmlu:high_school_computer_science|5|0
+leaderboard|mmlu:high_school_european_history|5|0
+leaderboard|mmlu:high_school_geography|5|0
+leaderboard|mmlu:high_school_mathematics|5|0
+leaderboard|mmlu:high_school_physics|5|0
+leaderboard|mmlu:high_school_statistics|5|0
+leaderboard|mmlu:high_school_us_history|5|0
+leaderboard|mmlu:high_school_world_history|5|0
+leaderboard|mmlu:prehistory|5|0
+leaderboard|mmlu:professional_medicine|5|0
+# WinoGrande
+leaderboard|winogrande|5|0
+# GSM8K
+leaderboard|gsm8k|5|0
+# BoolQA
+helm|boolq|5|0

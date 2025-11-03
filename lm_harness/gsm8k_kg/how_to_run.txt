@@ -1,0 +1,9 @@
+lm_eval --model hf \
+        --model_args pretrained=meta-llama/Llama-3.2-1B-Instruct \
+        --include_path . \
+        --tasks kyrgyz_gsm8k \
+        --device cuda \
+        --batch_size 4 \
+        --num_fewshot 0 \
+        --apply_chat_template \
+        --output_path /home/jovyan/kyrgyz_llm_eval-main/lm_harness_results/kg/zero

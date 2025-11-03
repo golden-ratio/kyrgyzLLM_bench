@@ -1,0 +1,2 @@
+chmod +x run_evaluations_gsm8k_en_few.sh
+./run_evaluations_gsm8k_en_few.sh
