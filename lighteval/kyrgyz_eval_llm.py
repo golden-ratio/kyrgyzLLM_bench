@@ -22,7 +22,7 @@ class HFSubsets(Enum):
 
     # ============== MMLU
     HF_BASE_MMLU_REPO = "TTimur/kyrgyzMMLU"
-    HF_REVISION = None # "209c5b5f999cae5c02eef5735eb817ead18ac214"
+    HF_REVISION = None 
 
     # MMLU (All-inclusive Task Entry)
     MMLU_KYRGYZ_ALL = "kyrgyz_mmlu_all"
@@ -176,7 +176,7 @@ def kyrgyz_eval_prompt(line: dict, task_name: Optional[str] = None) -> Doc:
     )
 
 
-# TODO: check if this is correct
+
 # HELLASWAG prompt
 def kyrgyz_hellaswag_prompt(line, task_name: str = None):
 
@@ -198,7 +198,7 @@ def kyrgyz_hellaswag_prompt(line, task_name: str = None):
         instruction="Төмөндө жалпы түшүнүккө (common sense) байланыштуу бир нече тандоо суроолору (жооптору менен) берилген.\n\n",
     )
 
-# TODO: check if this is correct
+
 # Winogrande prompt
 def kyrgyz_winogrande_prompt(line, task_name: str = None):
     # LL of query + choices
@@ -214,7 +214,7 @@ def kyrgyz_winogrande_prompt(line, task_name: str = None):
     )
 
 
-# TODO: check if this is correct
+
 # Truthful_qa prompt
 def kyrgyz_truthful_qa_multiple_choice(line, task_name: str = None):
     import ast
@@ -252,25 +252,7 @@ def kyrgyz_truthful_qa_multiple_choice(line, task_name: str = None):
     )
 
 
-# def truthful_qa_generative(line, task_name: str = None):  # BLEU and combination of BLEU
-#     correct_answers = [
-#         answer.strip() + "" if answer[-1] == "." else "." for answer in line["correct_answers"] if answer != ""
-#     ]
-#     if "I have no comment." not in correct_answers:
-#         correct_answers.append("I have no comment.")
-#     incorrect_answers = [
-#         answer.strip() + "" if answer[-1] == "." else "." for answer in line["incorrect_answers"] if answer != ""
-#     ]
 
-#     return Doc(
-#         task_name=task_name,
-#         query=line["question"].strip(),
-#         choices=correct_answers + incorrect_answers,
-#         gold_index=list(range(len(correct_answers))),
-#         specific={"len_mc1": len(line["mc1_targets"]["choices"])},
-#     )
-
-# TODO: check if this is correct
 # GSM8k prompt
 def kyrgyz_gsm8k_prompt(line, task_name: str = None):
     # Has special analysis in metric for number decomposition
@@ -281,7 +263,7 @@ def kyrgyz_gsm8k_prompt(line, task_name: str = None):
         gold_index=0,
     )
 
-# TODO: check if this is correct
+
 # BoolQ prompt
 def kyrgyz_boolq_prompt(line, task_name: str = None):
     # remove extra `?`
@@ -336,8 +318,6 @@ def create_task_config(
         few_shots_select="sequential",
         metric=metric,
         generation_size=generation_size,
-        # Since we use trust_dataset, we have to be careful about what is inside the dataset
-        # script. We thus lock the revision to ensure that the script doesn't change
         hf_revision=HFSubsets.HF_REVISION.value,
         trust_dataset=True,
         version=0,
