@@ -134,7 +134,7 @@ Have ideas, bug fixes, or want to add a custom task? We'd love for you to be par
 
 ## 📜 Citation
 
-Thanks for using **KyrgyzLLM-Bench** — where language learning models meet Serbian precision and creativity! Let's build smarter models together. 🚀�
+Thanks for using **KyrgyzLLM-Bench** 🚀�
 
 If you find this dataset useful in your research, please cite it as follows:
 
