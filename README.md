@@ -2,7 +2,8 @@
 
 Welcome to the **KyrgyzLLM-Bench - kyrgyz LLM Evaluation Dataset**, your one-stop solution for evaluating Large Language Models (LLMs) in Kyrgyz. This toolkit helps you measure model performance across diverse domains and question types specific to the Kyrgyz language, so your models can be more accurate, robust, and helpful for Kyrgyz-speaking users. Whether you're a researcher, developer, or practitioner—this dataset is tailored to help your Kyrgyz-capable LLM thrive.
 
-[![Paper](https://img.shields.io/badge/IEEE%20Xplore-Paper-blue)](https://ieeexplore.ieee.org/document/11206960)  
+[![Paper](https://img.shields.io/badge/IEEE%20Xplore-Paper-blue)](https://ieeexplore.ieee.org/document/11206960)
+[![arXiv](https://img.shields.io/badge/arXiv-2607.17173-b31b1b.svg)](https://arxiv.org/abs/2607.17173)
 [![Model](https://img.shields.io/badge/HuggingFace-Hub-yellow)](https://huggingface.co/TTimur)
 
 
