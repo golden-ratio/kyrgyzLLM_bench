@@ -6,6 +6,7 @@ prompt function.
 MMLU is separated by subject and also all in one.
 """
 
+import ast
 from enum import Enum
 from typing import List, Optional
 
@@ -180,12 +181,18 @@ def kyrgyz_eval_prompt(line: dict, task_name: Optional[str] = None) -> Doc:
 # HELLASWAG prompt
 def kyrgyz_hellaswag_prompt(line, task_name: str = None):
 
+    # In TTimur/hellaswag_kg, endings_kg is a string holding a list literal, and
+    # missing contexts are the string 'nan'. Parse/clean them before building the prompt.
+    endings = line["endings_kg"]
+    endings = ast.literal_eval(endings) if isinstance(endings, str) else list(endings)
+    ctx_b = "" if str(line["ctx_b_kg"]).strip().lower() == "nan" else line["ctx_b_kg"]
+
     ctx_a_kg = line['ctx_a_kg'] if line['ctx_a_kg'] else '.'
-    ctx_b_kg = line['ctx_b_kg'].capitalize() if line['ctx_b_kg'] else '.'
+    ctx_b_kg = ctx_b.capitalize() if ctx_b else '.'
 
     query = "Төмөндө жалпы түшүнүккө (common sense) байланыштуу бир нече тандоо суроолору (жооптору менен) берилген.\n\n"
     query += f"Суроо: {line['activity_label_kg']}: {ctx_a_kg} {ctx_b_kg}\n"
-    query += "".join([f"{key}. {choice}\n" for key, choice in zip(LETTER_INDICES, line["endings_kg"])])
+    query += "".join([f"{key}. {choice}\n" for key, choice in zip(LETTER_INDICES, endings)])
     query += "Туура жоопту тандаңыз: "
 
     gold_ix = int(line["label"]) if line["label"] != "" else -1
@@ -193,7 +200,7 @@ def kyrgyz_hellaswag_prompt(line, task_name: str = None):
     return Doc(
         task_name=task_name,
         query=query,
-        choices=[" " + i for i in LETTER_INDICES[: len(line["endings_kg"])]],
+        choices=[" " + i for i in LETTER_INDICES[: len(endings)]],
         gold_index=gold_ix,  # -1 for test,
         instruction="Төмөндө жалпы түшүнүккө (common sense) байланыштуу бир нече тандоо суроолору (жооптору менен) берилген.\n\n",
     )
